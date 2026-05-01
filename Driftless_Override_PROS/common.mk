@@ -25,6 +25,7 @@ ifndef CI
 	CXX_STANDARD?=gnu++26
 else
 	CXX_STANDARD?=gnu++20
+endif
 
 DEPDIR := .d
 $(shell mkdir -p $(DEPDIR))
