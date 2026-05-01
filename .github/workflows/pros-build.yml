@@ -23,12 +23,12 @@ jobs:
           pip install pros-cli
 
       - name: Install PROS toolchain
+        working-directory: Driftless_Override_PROS
         run: pros c install gcc-arm-none-eabi
 
       - name: Verify PROS install
         run: pros --version
 
       - name: Build project
-        working-directory: Driftless_Override_PROS
         run: |
           pros make
