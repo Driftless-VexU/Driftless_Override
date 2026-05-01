@@ -23,7 +23,7 @@ jobs:
           pip install pros-cli
 
       - name: Install PROS toolchain
-        run: pros c install
+        run: pros c install gcc-arm-none-eabi
 
       - name: Verify PROS install
         run: pros --version
