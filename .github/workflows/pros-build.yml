@@ -1,0 +1,30 @@
+name: PROS Build Check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install PROS CLI
+        run: |
+          pip install pros-cli
+
+      - name: Verify PROS install
+        run: pros --version
+
+      - name: Build project
+        run: |
+          pros make
