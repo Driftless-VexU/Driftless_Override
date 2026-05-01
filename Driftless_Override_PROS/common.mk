@@ -24,7 +24,7 @@ ifndef CI
 	C_STANDARD?=gnu23
 	CXX_STANDARD?=gnu++26
 else
-	C_STANDARD?=gnu20
+	C_STANDARD?=gnu17
 	CXX_STANDARD?=gnu++20
 endif
 
