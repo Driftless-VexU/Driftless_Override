@@ -26,5 +26,6 @@ jobs:
         run: pros --version
 
       - name: Build project
+        working-directory: Driftless_Override_PROS
         run: |
           pros make
